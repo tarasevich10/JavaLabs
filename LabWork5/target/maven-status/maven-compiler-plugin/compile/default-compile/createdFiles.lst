@@ -1,9 +1,13 @@
 InstrumentService.class
-Secateur.class
+persistence\dao\ToolDaoImpl.class
 Department.class
 Shovel.class
-Work.class
 Instrument.class
 config\JaxRsConfig.class
-Rake.class
+persistence\dao\ToolDao.class
 Tool.class
+persistence\dao\IDao.class
+persistence\dao\AbstractDao.class
+Secateur.class
+Work.class
+Rake.class

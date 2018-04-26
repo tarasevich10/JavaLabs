@@ -1,36 +1,49 @@
+import persistence.dao.ToolDao;
+
+import javax.inject.Inject;
+import javax.tools.Tool;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.HashMap;
 import java.util.Map;
 
 @Path("/instruments")
 public class InstrumentService {
 
-    private static Map<Integer, Secateur> instruments = new HashMap<>();
+    @Inject
+    private ToolDao dao;
+
+//    private static Map<Integer, Secateur> instruments = new HashMap<>();
 
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Secateur getInstrument(@PathParam("id") Integer id) {
-        return instruments.get(id);
+    public Tool getInstrument(@PathParam("id") Integer id) {
+        return dao.findById(id);
     }
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public void createInstrument(Secateur secateur) {
-        instruments.put(secateur.getId(), secateur);
+    public Tool createInstrument(Tool tool) {
+        //instruments.put(secateur.getId(), secateur);
+        dao.persist(tool);
+        return tool;
     }
-
     @PUT
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public void replaceInstrument(@PathParam("id") Integer id, Secateur secateur) {
-        instruments.replace(id, secateur);
+    public Response replaceInstrument(@PathParam("id") Integer id, Tool tool) {
+       // instruments.replace(id, secateur);
+        dao.update(tool);
+        return Response.ok().build();
+
     }
 
     @DELETE
     @Path("/{id}")
     public void deleteInstrument(@PathParam("id") Integer position) {
-        instruments.remove(position);
+        //instruments.remove(position);
+        dao.remove(position);
     }
 }

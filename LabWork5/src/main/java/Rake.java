@@ -24,8 +24,8 @@ public class Rake extends Tool {
         this.massOfRake = massOfRake;
     }
 
-    @Override
+  /*  @Override
     public Instrument getInstrumentType() {
         return INSTRUMENT_TYPE;
-    }
+    }*/
 }

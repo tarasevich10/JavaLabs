@@ -23,8 +23,8 @@ public class Shovel extends Tool {
         this.lengthOfShovel = lengthOfShovel;
     }
 
-    @Override
-    public Instrument getInstrumentType() {
-        return INSTRUMENT_TYPE;
-    }
+   // @Override
+  //  public Instrument getInstrumentType() {
+     //   return INSTRUMENT_TYPE;
+   // }
 }
