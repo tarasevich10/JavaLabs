@@ -27,7 +27,7 @@ public Computer(boolean IsLaptop, int memoryCapicity, int numberOfUsers, String 
 	
 	totalNumberOfUsers += numberOfUsers;
 }
-public Computer(boolean IsLaptop, int memoryCapicity, int numberOfUsers, String computerName, String nameOfOwner ){
+public Computer(boolean isLaptop, int memoryCapicity, int numberOfUsers, String computerName, String nameOfOwner ){
 	this.isLaptop = IsLaptop;
 	this.memoryCapicity = memoryCapicity;
 	this.numberOfUsers = numberOfUsers;
