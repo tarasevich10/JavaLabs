@@ -19,8 +19,8 @@ public Computer(){
 	
 	totalNumberOfUsers += numberOfUsers;
 }
-public Computer(boolean IsLaptop, int memoryCapicity, int numberOfUsers, String computerName ){
-	this.isLaptop = IsLaptop;
+public Computer(boolean isLaptop, int memoryCapicity, int numberOfUsers, String computerName ){
+	this.isLaptop = isLaptop;
 	this.memoryCapicity = memoryCapicity;
 	this.numberOfUsers = numberOfUsers;
 	this.computerName = computerName;
@@ -28,7 +28,7 @@ public Computer(boolean IsLaptop, int memoryCapicity, int numberOfUsers, String 
 	totalNumberOfUsers += numberOfUsers;
 }
 public Computer(boolean isLaptop, int memoryCapicity, int numberOfUsers, String computerName, String nameOfOwner ){
-	this.isLaptop = IsLaptop;
+	this.isLaptop = isLaptop;
 	this.memoryCapicity = memoryCapicity;
 	this.numberOfUsers = numberOfUsers;
 	this.computerName = computerName;
